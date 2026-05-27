@@ -18,7 +18,8 @@ export default function AboutPreview() {
     <section
       id="about"
       aria-label="About S&B Dreams House"
-      style={{ padding: "6rem 2rem", backgroundColor: "#fff" }}
+      className="py-16 md:py-24 px-4 md:px-8"
+      style={{ backgroundColor: "#fff" }}
     >
       <div
         style={{

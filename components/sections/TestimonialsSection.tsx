@@ -13,7 +13,8 @@ export default function TestimonialsSection() {
     <section
       id="testimonials"
       aria-label="Guest testimonials"
-      style={{ padding: "6rem 0", backgroundColor: "#F5F0E8", overflow: "hidden" }}
+      className="py-16 md:py-24"
+      style={{ backgroundColor: "#F5F0E8", overflow: "hidden" }}
     >
       <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 2rem" }}>
         <SectionHeading

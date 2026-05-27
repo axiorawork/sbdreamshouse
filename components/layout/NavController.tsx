@@ -21,8 +21,9 @@ export default function NavController() {
         Skip to main content
       </a>
 
-      {/* Floating Dynamic Logo tied to scroll */}
+      {/* Floating Dynamic Logo - Desktop Only */}
       <motion.div
+        className="hidden lg:block"
         style={{
           position: "fixed",
           left: "50%",
@@ -42,6 +43,36 @@ export default function NavController() {
           />
         </Link>
       </motion.div>
+
+      {/* Mobile Top Bar with Logo */}
+      <div
+        className="lg:hidden"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          padding: "1rem",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          zIndex: 105,
+          background: "linear-gradient(to bottom, rgba(15,25,18,0.7) 0%, transparent 100%)",
+          pointerEvents: "none",
+        }}
+      >
+        <button 
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="pointer-events-auto"
+          aria-label="Scroll to top"
+        >
+          <img 
+            src="/logo.webp" 
+            alt="S&B Dreams House" 
+            style={{ height: "48px", width: "auto", objectFit: "contain", filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.5))" }} 
+          />
+        </button>
+      </div>
 
       {/* Smooth Scroll-Driven Navbar */}
       <DynamicNav />

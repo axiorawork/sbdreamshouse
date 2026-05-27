@@ -25,7 +25,8 @@ export default function FacilitiesSection() {
     <section
       id="facilities"
       aria-label="Our facilities"
-      style={{ padding: "6rem 2rem", backgroundColor: "#0F1912" }}
+      className="py-16 md:py-24 px-4 md:px-8"
+      style={{ backgroundColor: "#0F1912" }}
     >
       <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
         <SectionHeading

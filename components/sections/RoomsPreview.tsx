@@ -9,7 +9,8 @@ export default function RoomsPreview() {
     <section
       id="rooms"
       aria-label="Our rooms"
-      style={{ padding: "6rem 2rem", backgroundColor: "#fff" }}
+      className="py-16 md:py-24 px-4 md:px-8"
+      style={{ backgroundColor: "#fff" }}
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <SectionHeading

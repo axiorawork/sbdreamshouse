@@ -15,7 +15,8 @@ export default function LocationSection() {
     <section
       id="location"
       aria-label="Location and directions"
-      style={{ padding: "6rem 2rem", backgroundColor: "#F5F0E8" }}
+      className="py-16 md:py-24 px-4 md:px-8"
+      style={{ backgroundColor: "#F5F0E8" }}
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <SectionHeading
