@@ -17,8 +17,17 @@ export default function NavController() {
 
   // Body scroll lock
   useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    };
   }, [mobileOpen]);
 
   // Escape key closes menu
@@ -45,6 +54,27 @@ export default function NavController() {
         Skip to main content
       </a>
 
+      {/* Mobile Navbar Background (Appears on scroll) */}
+      <motion.div
+        className="lg:hidden"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          height: "72px",
+          backgroundColor: useTransform(scrollY, [0, 300], ["rgba(12, 20, 14, 0)", "rgba(12, 20, 14, 0.95)"]),
+          borderBottom: useTransform(scrollY, [0, 300], ["1px solid rgba(255,255,255,0)", "1px solid rgba(255,255,255,0.08)"]),
+          backdropFilter: useTransform(scrollY, [0, 300], ["blur(0px)", "blur(20px)"]),
+          WebkitBackdropFilter: useTransform(scrollY, [0, 300], ["blur(0px)", "blur(20px)"]),
+          boxShadow: useTransform(scrollY, [0, 300], ["0 4px 24px rgba(0,0,0,0)", "0 4px 24px rgba(0,0,0,0.25)"]),
+          zIndex: 40,
+          pointerEvents: "none",
+          opacity: mobileOpen ? 0 : 1,
+          transition: "opacity 0.2s",
+        }}
+      />
+
       {/* Floating Dynamic Logo — shared desktop & mobile */}
       <motion.div
         style={{
@@ -56,6 +86,8 @@ export default function NavController() {
           height: logoSize,
           zIndex: 100,
           pointerEvents: "none",
+          opacity: mobileOpen ? 0 : 1,
+          transition: "opacity 0.2s",
         }}
       >
         <Link href="/" className="pointer-events-auto block w-full h-full" aria-label="S&B Dreams House - Home">
