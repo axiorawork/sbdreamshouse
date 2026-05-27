@@ -67,7 +67,6 @@ export default function DynamicNav() {
         border: navBorder,
         padding: navPadding,
         zIndex: 40,
-        display: "flex",
         alignItems: "center",
         justifyContent: "center",
         backdropFilter: "blur(20px)",
