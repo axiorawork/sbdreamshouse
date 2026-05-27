@@ -8,9 +8,10 @@ export default function StatsBar() {
   return (
     <section
       aria-label="Property statistics"
-      style={{ backgroundColor: "#162018", padding: "3rem 2rem" }}
+      style={{ padding: "60px 1rem", backgroundColor: "#162018" }}
     >
       <div
+        id="stats-grid"
         style={{
           maxWidth: "1100px",
           margin: "0 auto",

@@ -1,13 +1,13 @@
 import { generatePageMetadata } from "@/app/lib/metadata";
 import { EXPERIENCES } from "@/app/lib/constants";
 import Image from "next/image";
-import SectionHeading from "@/components/ui/SectionHeading";
 
-export const metadata = generatePageMetadata(
-  "Experiences | S&B Dreams House",
-  "Explore nature walks, tea estate tours, kayaking, sunrise viewing, and more curated experiences in Munnar with S&B Dreams House.",
-  "/experiences"
-);
+export const metadata = generatePageMetadata({
+  title: "Experiences",
+  description: "Nature walks, kayaking, tea estate tours, local cuisine and sunrise viewpoints — discover unique experiences at S&B Dreams House Munnar.",
+  path: "/experiences",
+  keywords: ["munnar experiences", "tea estate tour", "kayaking munnar", "sunrise munnar"],
+});
 
 export default function ExperiencesPage() {
   return (
@@ -16,7 +16,7 @@ export default function ExperiencesPage() {
       <section style={{ position: "relative", height: "60vh", minHeight: "400px", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <Image src="/hero_slides/Slide1.webp" alt="Experiences in Munnar" fill className="object-cover" priority />
         <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.55)" }} />
-        <div style={{ position: "relative", textAlign: "center", padding: "2rem" }}>
+        <div style={{ position: "relative", textAlign: "center", padding: "2rem", paddingTop: "160px" }}>
           <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C89B4A", display: "block", marginBottom: "1rem" }}>Curated For You</span>
           <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(36px, 5vw, 64px)", fontWeight: 700, color: "#fff", lineHeight: 1.2 }}>Our Experiences</h1>
           <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "18px", marginTop: "1rem", maxWidth: "600px", margin: "1rem auto 0" }}>Every experience is a window into the real Munnar.</p>

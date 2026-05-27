@@ -9,8 +9,7 @@ export default function ExperiencesSection() {
     <section
       id="experiences"
       aria-label="Our experiences"
-      className="py-16 md:py-24 px-4 md:px-8"
-      style={{ backgroundColor: "#F5F0E8" }}
+      style={{ padding: "60px 1rem", backgroundColor: "#F5F0E8" }}
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <SectionHeading
@@ -19,11 +18,8 @@ export default function ExperiencesSection() {
           subtitle="From misty mountain trails to vibrant local culture, every experience at S&B Dreams House is thoughtfully crafted to connect you with the heart of Munnar."
         />
         <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
-            gap: "1.5rem",
-          }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          style={{ alignItems: "stretch" }}
         >
           {EXPERIENCES.map((exp, i) => (
             <ExperienceCard
@@ -37,7 +33,7 @@ export default function ExperiencesSection() {
             />
           ))}
         </div>
-        <div style={{ textAlign: "center", marginTop: "3rem" }}>
+        <div style={{ textAlign: "center", marginTop: "2rem", marginBottom: "60px" }}>
           <Link
             href="/experiences"
             style={{

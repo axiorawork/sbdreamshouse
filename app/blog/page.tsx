@@ -4,11 +4,12 @@ import BlogCard from "@/components/ui/BlogCard";
 import Image from "next/image";
 import SectionHeading from "@/components/ui/SectionHeading";
 
-export const metadata = generatePageMetadata(
-  "Blog | S&B Dreams House",
-  "Travel guides, tips, and stories about Munnar and Kerala. Discover the best of the region through the eyes of S&B Dreams House.",
-  "/blog"
-);
+export const metadata = generatePageMetadata({
+  title: "Blog — Munnar Travel & Homestay Tips",
+  description: "Travel guides, local tips, and stories from Munnar Kerala. Plan your perfect homestay visit with insights from S&B Dreams House.",
+  path: "/blog",
+  keywords: ["munnar travel guide", "kerala travel blog", "munnar tips"],
+});
 
 export default function BlogPage() {
   return (
@@ -17,7 +18,7 @@ export default function BlogPage() {
       <section style={{ position: "relative", height: "50vh", minHeight: "340px", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <Image src="/hero_slides/Slide5.webp" alt="Blog — S&B Dreams House" fill className="object-cover" priority />
         <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.55)" }} />
-        <div style={{ position: "relative", textAlign: "center", padding: "2rem" }}>
+        <div style={{ position: "relative", textAlign: "center", padding: "2rem", paddingTop: "160px" }}>
           <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C89B4A", display: "block", marginBottom: "1rem" }}>Stories & Guides</span>
           <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(36px, 5vw, 64px)", fontWeight: 700, color: "#fff", lineHeight: 1.2 }}>Our Blog</h1>
           <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "18px", marginTop: "1rem", maxWidth: "600px", margin: "1rem auto 0" }}>Insights, travel guides, and stories from the heart of Munnar.</p>

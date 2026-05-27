@@ -24,14 +24,14 @@ export default function SectionHeading({
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true }}
       transition={{ duration: 0.6, ease: "easeOut" }}
+      className="mb-12 md:mb-16"
       style={{
         display: "flex",
         flexDirection: "column",
         alignItems,
         textAlign,
-        marginBottom: "3rem",
       }}
     >
       {label && (
@@ -42,7 +42,7 @@ export default function SectionHeading({
             letterSpacing: "0.2em",
             textTransform: "uppercase",
             color: "#C89B4A",
-            marginBottom: "0.75rem",
+            marginBottom: "1rem",
             display: "block",
           }}
         >
@@ -56,7 +56,7 @@ export default function SectionHeading({
           fontWeight: 700,
           color: lightMode ? "#ffffff" : "#1A1A1A",
           lineHeight: 1.2,
-          marginBottom: subtitle ? "1rem" : 0,
+          marginBottom: subtitle ? "1.5rem" : 0,
         }}
       >
         {title}

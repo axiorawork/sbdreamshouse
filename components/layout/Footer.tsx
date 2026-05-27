@@ -77,6 +77,7 @@ export default function Footer() {
       <div style={{ height: "3px", background: "linear-gradient(90deg, transparent, #C89B4A, transparent)" }} />
 
       <div
+        id="footer-grid"
         style={{
           maxWidth: "1280px",
           margin: "0 auto",
@@ -101,7 +102,7 @@ export default function Footer() {
           <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "14px", lineHeight: "1.8", marginBottom: "1.5rem" }}>
             A one-of-a-kind cave-inspired homestay in the heart of Munnar, Kerala. Warm hospitality, nature experiences, and memories that last a lifetime.
           </p>
-          <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+          <div id="footer-social" style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
             {socialLinks.map((s) => (
               <a
                 key={s.label}

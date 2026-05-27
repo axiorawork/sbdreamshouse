@@ -25,8 +25,7 @@ export default function FacilitiesSection() {
     <section
       id="facilities"
       aria-label="Our facilities"
-      className="py-16 md:py-24 px-4 md:px-8"
-      style={{ backgroundColor: "#0F1912" }}
+      style={{ padding: "60px 1rem", backgroundColor: "#0F1912" }}
     >
       <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
         <SectionHeading
@@ -36,6 +35,7 @@ export default function FacilitiesSection() {
           lightMode
         />
         <div
+          id="facilities-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",

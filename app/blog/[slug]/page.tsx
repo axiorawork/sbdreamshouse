@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) return {};
-  return generatePageMetadata(post.title, post.excerpt, `/blog/${slug}`);
+  return generatePageMetadata({ title: post.title, description: post.excerpt, path: `/blog/${slug}` });
 }
 
 export async function generateStaticParams() {

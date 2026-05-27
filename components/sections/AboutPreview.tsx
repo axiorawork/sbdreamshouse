@@ -18,15 +18,15 @@ export default function AboutPreview() {
     <section
       id="about"
       aria-label="About S&B Dreams House"
-      className="py-16 md:py-24 px-4 md:px-8"
-      style={{ backgroundColor: "#fff" }}
+      style={{ padding: "60px 1rem", backgroundColor: "#fff" }}
     >
       <div
+        id="about-grid"
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
           gap: "4rem",
           alignItems: "center",
         }}
@@ -35,7 +35,7 @@ export default function AboutPreview() {
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           style={{ position: "relative" }}
         >
@@ -59,6 +59,7 @@ export default function AboutPreview() {
           </div>
           {/* Overlapping smaller image */}
           <div
+            id="about-overlay-img"
             style={{
               position: "absolute",
               bottom: "-28px",
@@ -86,7 +87,7 @@ export default function AboutPreview() {
         <motion.div
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
           style={{ paddingBottom: "2rem" }}
         >
@@ -97,13 +98,13 @@ export default function AboutPreview() {
           />
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem", marginBottom: "1.75rem" }}>
             <p style={{ color: "#6B7280", lineHeight: 1.8, fontSize: "16px" }}>
-              Nestled in the verdant hills of Munnar, S&B Dreams House was born from a family's deep love for their land and a desire to share its beauty with the world. What began as a humble family home in 2016 has grown into one of Munnar's most beloved homestays.
+              Nestled in the verdant hills of Munnar, S&B Dreams House was born from a family&apos;s deep love for their land and a desire to share its beauty with the world. What began as a humble family home in 2016 has grown into one of Munnar&apos;s most beloved homestays.
             </p>
             <p style={{ color: "#6B7280", lineHeight: 1.8, fontSize: "16px" }}>
-              Our cave-inspired architecture isn't just a design choice — it's a reflection of our philosophy: to let nature lead. Every stone, every plant, every meal is chosen to bring you closer to the extraordinary place we call home.
+              Our cave-inspired architecture isn&apos;t just a design choice — it&apos;s a reflection of our philosophy: to let nature lead. Every stone, every plant, every meal is chosen to bring you closer to the extraordinary place we call home.
             </p>
             <p style={{ color: "#6B7280", lineHeight: 1.8, fontSize: "16px" }}>
-              When you stay with us, you become family. We'll share our favourite trails, cook our most treasured recipes, and go out of our way to make sure you leave with memories that last a lifetime.
+              When you stay with us, you become family. We&apos;ll share our favourite trails, cook our most treasured recipes, and go out of our way to make sure you leave with memories that last a lifetime.
             </p>
           </div>
 

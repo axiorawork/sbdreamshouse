@@ -1,12 +1,12 @@
 import { generatePageMetadata } from "@/app/lib/metadata";
 import Image from "next/image";
-import { Check } from "lucide-react";
 
-export const metadata = generatePageMetadata(
-  "Our Story | S&B Dreams House",
-  "The story of S&B Dreams House — a family-run gem in Munnar, Kerala, built with love, heritage, and deep respect for nature since 2016.",
-  "/our-story"
-);
+export const metadata = generatePageMetadata({
+  title: "Our Story",
+  description: "Learn about the family behind S&B Dreams House — a registered Kerala Diamond House homestay with over 8 years of warm hospitality in Munnar.",
+  path: "/our-story",
+  keywords: ["munnar family homestay", "kerala hospitality", "munnar diamond homestay"],
+});
 
 const timeline = [
   { year: "2016", title: "The Dream Begins", desc: "S&B Dreams House opens its doors as a small family homestay with just 3 rooms, driven by a passion for hospitality and love of Munnar." },
@@ -30,10 +30,10 @@ export default function OurStoryPage() {
       <section style={{ position: "relative", height: "65vh", minHeight: "400px", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <Image src="/hero_slides/Slide2.webp" alt="S&B Dreams House garden" fill className="object-cover" priority />
         <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.55)" }} />
-        <div style={{ position: "relative", textAlign: "center", padding: "2rem" }}>
+        <div style={{ position: "relative", textAlign: "center", padding: "2rem", paddingTop: "160px" }}>
           <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C89B4A", display: "block", marginBottom: "1rem" }}>Since 2016</span>
           <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(36px, 5vw, 64px)", fontWeight: 700, color: "#fff", lineHeight: 1.2 }}>Our Story</h1>
-          <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "18px", marginTop: "1rem", maxWidth: "600px", margin: "1rem auto 0" }}>A family's love for Munnar, turned into a home for the world.</p>
+          <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "18px", marginTop: "1rem", maxWidth: "600px", margin: "1rem auto 0" }}>A family&apos;s love for Munnar, turned into a home for the world.</p>
         </div>
       </section>
 
@@ -46,7 +46,7 @@ export default function OurStoryPage() {
             <p>S&B Dreams House began with a simple idea: that the best way to experience a place is through the eyes and heart of someone who truly belongs there. For us, that place is Munnar.</p>
             <p>Our family has called these misty hills home for generations. When we decided to open our doors to travellers in 2016, we made a promise to ourselves — we would never let it feel like a business. Every guest would be treated as a friend arriving for the first time, and we would share our Munnar as if showing it to someone we loved.</p>
             <p>The cave suite came later — a wild idea that took months of hand-crafting to bring to life. When the first guests stayed in it and said they had never experienced anything like it, we knew we had created something truly special.</p>
-            <p>Today, over 2,000 families have stayed with us. Each one has left a mark on us — their stories, their gratitude, their children's laughter in our garden. This is what drives us every single day.</p>
+            <p>Today, over 2,000 families have stayed with us. Each one has left a mark on us — their stories, their gratitude, their children&apos;s laughter in our garden. This is what drives us every single day.</p>
           </div>
         </div>
       </section>

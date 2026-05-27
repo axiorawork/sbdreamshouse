@@ -3,11 +3,12 @@ import Image from "next/image";
 import { Wifi, Car, UtensilsCrossed, Bell, Map, PlaneLanding, WashingMachine, Droplets, Trees } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
-export const metadata = generatePageMetadata(
-  "Facilities | S&B Dreams House",
-  "Discover all the facilities and amenities at S&B Dreams House — free WiFi, home-cooked meals, guided tours, airport pickup, nature garden, and more.",
-  "/facilities"
-);
+export const metadata = generatePageMetadata({
+  title: "Facilities",
+  description: "Free WiFi, parking, home-cooked Kerala meals, guided tours, airport pickup and more — all facilities at S&B Dreams House Munnar.",
+  path: "/facilities",
+  keywords: ["munnar homestay amenities", "free wifi munnar", "kerala home cooked meals"],
+});
 
 const ICON_MAP: Record<string, LucideIcon> = { Wifi, Car, UtensilsCrossed, Bell, Map, PlaneLanding, WashingMachine, Droplets, Trees };
 
@@ -39,7 +40,7 @@ export default function FacilitiesPage() {
       <section style={{ position: "relative", height: "55vh", minHeight: "360px", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <Image src="/hero_slides/Slide2.webp" alt="S&B Dreams House garden facilities" fill className="object-cover" priority />
         <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.55)" }} />
-        <div style={{ position: "relative", textAlign: "center", padding: "2rem" }}>
+        <div style={{ position: "relative", textAlign: "center", padding: "2rem", paddingTop: "160px" }}>
           <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C89B4A", display: "block", marginBottom: "1rem" }}>Everything You Need</span>
           <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(36px, 5vw, 64px)", fontWeight: 700, color: "#fff", lineHeight: 1.2 }}>Facilities & Amenities</h1>
         </div>

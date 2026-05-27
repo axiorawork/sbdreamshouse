@@ -12,8 +12,7 @@ export default function GalleryPreview() {
     <section
       id="gallery"
       aria-label="Photo gallery"
-      className="py-16 md:py-24 px-4 md:px-8"
-      style={{ backgroundColor: "#fff" }}
+      style={{ padding: "60px 1rem", backgroundColor: "#fff" }}
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <SectionHeading
@@ -22,7 +21,7 @@ export default function GalleryPreview() {
           subtitle="Every corner of S&B Dreams House tells a story. Take a visual tour before you arrive."
         />
         <GalleryGrid images={preview} />
-        <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
+        <div style={{ textAlign: "center", marginTop: "2rem", marginBottom: "60px" }}>
           <Link
             href="/gallery"
             style={{

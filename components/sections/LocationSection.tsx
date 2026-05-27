@@ -15,8 +15,7 @@ export default function LocationSection() {
     <section
       id="location"
       aria-label="Location and directions"
-      className="py-16 md:py-24 px-4 md:px-8"
-      style={{ backgroundColor: "#F5F0E8" }}
+      style={{ padding: "60px 1rem", backgroundColor: "#F5F0E8" }}
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <SectionHeading
@@ -25,9 +24,10 @@ export default function LocationSection() {
           subtitle="Located in the heart of Munnar, Kerala — close to everything yet perfectly secluded."
         />
         <div
+          id="location-grid"
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
             gap: "3rem",
             alignItems: "start",
           }}
@@ -105,7 +105,7 @@ export default function LocationSection() {
           </div>
 
           {/* Right: Embedded Map */}
-          <div style={{ borderRadius: "16px", overflow: "hidden", boxShadow: "0 8px 32px rgba(0,0,0,0.12)", height: "400px" }}>
+          <div id="location-map" style={{ borderRadius: "16px", overflow: "hidden", boxShadow: "0 8px 32px rgba(0,0,0,0.12)", height: "400px" }}>
             <iframe
               title="S&B Dreams House Location in Munnar, Kerala"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.9891399483765!2d77.05736731465026!3d10.089447992774584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0799ad6c5dc8c3%3A0x8d6f3d9b3c0d3e7f!2sMunnar%2C%20Kerala%2C%20India!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"

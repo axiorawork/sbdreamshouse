@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { LEFT_NAV_LINKS, RIGHT_NAV_LINKS } from "@/app/lib/constants";

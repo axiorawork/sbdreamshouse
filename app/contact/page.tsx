@@ -67,8 +67,8 @@ export default function ContactPage() {
       <section style={{ position: "relative", height: "50vh", minHeight: "340px", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <Image src="/hero_slides/Slide5.webp" alt="Contact S&B Dreams House" fill className="object-cover" priority />
         <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.6)" }} />
-        <div style={{ position: "relative", textAlign: "center", padding: "2rem" }}>
-          <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C89B4A", display: "block", marginBottom: "1rem" }}>We'd Love to Hear From You</span>
+        <div style={{ position: "relative", textAlign: "center", padding: "2rem", paddingTop: "160px" }}>
+          <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C89B4A", display: "block", marginBottom: "1rem" }}>We&apos;d Love to Hear From You</span>
           <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(36px, 5vw, 64px)", fontWeight: 700, color: "#fff", lineHeight: 1.2 }}>Get in Touch</h1>
         </div>
       </section>
@@ -88,13 +88,13 @@ export default function ContactPage() {
           {/* Left: Form */}
           <div>
             <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "32px", fontWeight: 700, color: "#1A1A1A", marginBottom: "0.5rem" }}>Book Your Stay</h2>
-            <p style={{ color: "#6B7280", marginBottom: "2rem", lineHeight: 1.6 }}>Fill in the form and we'll get back to you within 24 hours with availability and rates.</p>
+            <p style={{ color: "#6B7280", marginBottom: "2rem", lineHeight: 1.6 }}>Fill in the form and we&apos;ll get back to you within 24 hours with availability and rates.</p>
 
             {/* Success state */}
             {status === "success" && (
               <div style={{ backgroundColor: "#f0fdf4", border: "1px solid #86efac", borderRadius: "12px", padding: "1rem 1.25rem", marginBottom: "1.5rem", display: "flex", alignItems: "center", gap: "0.75rem" }}>
                 <CheckCircle size={20} color="#16a34a" />
-                <span style={{ color: "#15803d", fontSize: "15px", fontWeight: 500 }}>Thank you! We'll be in touch within 24 hours.</span>
+                <span style={{ color: "#15803d", fontSize: "15px", fontWeight: 500 }}>Thank you! We&apos;ll be in touch within 24 hours.</span>
               </div>
             )}
             {status === "error" && (

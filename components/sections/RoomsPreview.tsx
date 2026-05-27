@@ -9,8 +9,7 @@ export default function RoomsPreview() {
     <section
       id="rooms"
       aria-label="Our rooms"
-      className="py-16 md:py-24 px-4 md:px-8"
-      style={{ backgroundColor: "#fff" }}
+      style={{ padding: "60px 1rem", backgroundColor: "#fff" }}
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <SectionHeading
@@ -27,12 +26,12 @@ export default function RoomsPreview() {
           }}
         >
           {ROOMS.map((room) => (
-            <div key={room.id} style={{ flex: "1 1 300px", maxWidth: "380px", display: "flex" }}>
+            <div key={room.id} className="room-card-wrapper" style={{ flex: "1 1 300px", maxWidth: "380px", display: "flex" }}>
               <RoomCard {...room} />
             </div>
           ))}
         </div>
-        <div style={{ textAlign: "center", marginTop: "3rem" }}>
+        <div style={{ textAlign: "center", marginTop: "2rem", marginBottom: "60px" }}>
           <Link
             href="/rooms"
             style={{

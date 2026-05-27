@@ -28,6 +28,9 @@ export default function ExperienceCard({
       transition={{ duration: 0.5, ease: "easeOut", delay }}
       whileHover={{ y: -8 }}
       style={{
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
         borderRadius: "16px",
         overflow: "hidden",
         backgroundColor: "#ffffff",
@@ -61,7 +64,7 @@ export default function ExperienceCard({
       </div>
 
       {/* Content */}
-      <div style={{ padding: "1.25rem 1.5rem" }}>
+      <div style={{ padding: "1.25rem 1.5rem", flexGrow: 1, display: "flex", flexDirection: "column" }}>
         <h3
           style={{
             fontFamily: "'Playfair Display', serif",

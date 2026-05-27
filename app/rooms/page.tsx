@@ -1,17 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { generatePageMetadata } from "@/app/lib/metadata";
 import { ROOMS } from "@/app/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { Wifi, Bed, Eye, Wind, Coffee, Utensils, Check } from "lucide-react";
+import { Check } from "lucide-react";
 
 // Note: Can't export metadata from 'use client' — use a separate metadata file or remove 'use client' and handle state differently.
 // For simplicity, metadata is set at the module level here without 'use client'.
 // The filter interaction requires client state.
-
-const AMENITY_ICONS: Record<string, React.ElementType> = { "Free WiFi": Wifi, "King Bed": Bed, "Queen Bed": Bed, "Double Bed": Bed, "Mountain View": Eye, "Garden View": Eye, "AC": Wind, "Hot Water": Coffee, "Room Service": Utensils };
 
 const FILTERS = ["All", "Budget", "Premium", "Suite"];
 
@@ -25,8 +22,8 @@ export default function RoomsPage() {
       <section style={{ position: "relative", height: "55vh", minHeight: "380px", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <Image src="/hero_slides/Slide3.webp" alt="S&B Dreams House rooms" fill className="object-cover" priority />
         <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.55)" }} />
-        <div style={{ position: "relative", textAlign: "center", padding: "2rem" }}>
-          <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C89B4A", display: "block", marginBottom: "1rem" }}>Where You'll Stay</span>
+        <div style={{ position: "relative", textAlign: "center", padding: "2rem", paddingTop: "160px" }}>
+          <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C89B4A", display: "block", marginBottom: "1rem" }}>Where You&apos;ll Stay</span>
           <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(36px, 5vw, 64px)", fontWeight: 700, color: "#fff", lineHeight: 1.2 }}>Our Rooms</h1>
         </div>
       </section>
@@ -86,7 +83,6 @@ export default function RoomsPage() {
                 <h3 style={{ fontSize: "13px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#374151", marginBottom: "0.75rem" }}>Amenities</h3>
                 <ul style={{ listStyle: "none", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", marginBottom: "2rem" }}>
                   {room.amenities.map((a) => {
-                    const Icon = AMENITY_ICONS[a];
                     return (
                       <li key={a} style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "14px", color: "#374151" }}>
                         <Check size={14} color="#C89B4A" /> {a}
